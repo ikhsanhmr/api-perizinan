@@ -71,41 +71,5 @@
  <!-- /.content-wrapper -->
 
  <script>
- 	fetch('https://siaplayani.sumutprov.go.id/main/apiweb/pln/yu8wgeArYwxn/all')
- 		.then(res => {
- 			return res.json()
- 		}).then(data => {
- 			let html = ""
- 			let no = 1
- 			data.map(item => {
- 				html = html + `
-          <tr>
-            <td>${no}</td>
-            <td>${item.no_pendaftaran}</td>
-            <td>${item.nama_pemohon}</td>
-            <td>${item.nama_izin}</td>
-            <td>${item.lokasi_izin}</td>
-            <td>${item.kebutuhan_listrik}</td>
-            <td>${item.thn_rencana_operasi}</td>
-            <td>${item.status_berkas}</td>
-            <td>${item.telp}</td>
-            <td>${item.alamat_pemohon}</td>
-            <td>${item.nama_perusahaan}</td>
-            <td>${item.alamat_perusahaan}</td>
-            <td>${item.email_perusahaan}</td>
-            <td>${item.telp_perusahaan}</td>
-            <td>${item.npwp_perusahaan}</td>
-            <td>${item.NIB}</td>
-            <td>${item.provinsi}</td>
-            <td>${item.kabupaten}</td>
-            <td>${item.kecamatan}</td>
-            <td>${item.kelurahan}</td>
-          </tr>
-        `
- 				no++
- 			})
- 			dataPerijinan = [...data]
- 			document.querySelector('#table_aplikasi_perijinan tbody').innerHTML = html
- 			console.log(dataPerijinan)
- 		})
+
  </script>
