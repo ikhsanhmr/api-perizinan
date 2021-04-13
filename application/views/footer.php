@@ -86,6 +86,7 @@
     .then(res => {
       return res.json()
     }).then(data => {
+      console.log(data)
       let html = ""
       let no = 1
       data.map(item => {
